@@ -53,15 +53,15 @@ On the other hand, if a token is issued on BSC first and want it to circulate on
 1. In Black IDE, connect with your Metamask and choose network to BNB Chain Testnet.
 2. Create a project and choose ERC20 template
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.001.png)
+![](images/create_project.png)
 
 2. Open ERC20.sol under contracts folder and change the contract name to "BNBChainClubToken".
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.002.png)
+![](images/contract_rename.png)
 
 3. Check Solidity Compiler version at bottom right corner, make sure it is 0.8.0, which is the same as pragma version in the code.
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.004.png)
+![](images/deploy_contract.png)
 
 4. Click Build and Deploy, when deploy choose BNBChainClubToken.json (This is the ABI file of the smart contract), give name as "BNB Chain Club Token", symbol as "BCC" and totalSupply as 21000000000000000000000000.
 6. Check transaction in Bscscan. No extra fee, just a normal gas fee. Record the address of the token contract.
@@ -87,11 +87,11 @@ amount is 21000000000000000000000000 which is all of the circulation (1e18) on *
 
 <https://testnet.bscscan.com/tx/0x4c9ca7804c151e9fc4b4bda68dabf60b4fb6bd63123172c1017f33b3da9520c3> 
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.005.png)
+![](images/approve.png)
 
 2. Input 0x0000000000000000000000000000000000001008 in Black IDE, you will see below because it doesn’t have ABI file. Get ABI file of TokenManager from here: <https://github.com/bnb-chain/bsc-genesis-contract/blob/master/abi/tokenmanager.abi> Add it to ABI Storage
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.006.png)
+![](images/tokenmanger_missing_abi.png)
 
 3. After ABI is imported, choose approveBind(), we will let TokenManager complete the binding by transferring our specified amount to pegged account TokenHub.
 
@@ -103,7 +103,7 @@ bep2Symbol is the full token name on Beacon Chain
 
 These transactions will only have a normal gas fee. 
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.007.png)
+![](images/approve_bind.png)
 
 4. Confirm the bind result by
 
