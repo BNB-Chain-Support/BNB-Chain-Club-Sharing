@@ -1,7 +1,9 @@
 # Issuing a token on BNB Chain tutorial
 
 ## Prerequisites
-**BNB Beacon Chain(BC)**: Beacon Chain is a blockchain developed by Binance and its community that implements a vision of a decentralized exchange (DEX) for digital assets. (DEX on Beacon Chain has been decommissioned on Aug. 2022). At the heart of Beacon Chain is a highly performant matching engine built on distributed consensus that aims to replicate the <1 second trading efficiency of current centralized exchanges. Beacon Chain is not EVM-capable and doesn’t support smart contracts.
+**BNB Beacon Chain (BC)**: Beacon Chain is a blockchain developed by Binance and its community that implements a vision of a decentralized exchange (DEX) for digital assets. (DEX on Beacon Chain has been decommissioned on Aug. 2022). At the heart of Beacon Chain is a highly performant matching engine built on distributed consensus that aims to replicate the <1 second trading efficiency of current centralized exchanges. Beacon Chain is not EVM-compatible and doesn’t support smart contracts.
+
+**BNB Smart Chain (BSC)**: BNB Smart Chain is an innovative solution to bring programmability and interoperability to Beacon Chain. BNB Smart Chain relies on a system of 21 active validators with Proof of Staked Authority (PoSA) consensus that can support short block time and lower fees.
 
 **BEP2**: a token standard for fungible tokens on BNB Beacon Chain, describes a common set of rules for token management within the Binance Chain ecosystem. It introduces the following details of a token on Beacon Chain:
 
@@ -17,9 +19,7 @@
 - Black IDE (To create, compile and interact with Smart Contract)
 - bnbcli (BNB Beacon Chain Command Line Interface) <https://github.com/bnb-chain/node/releases>
 - Bscscan (the browser of BNB Smart Chain) <https://testnet.bscscan.com/> 
-
 - BNB Beacon Chain Explorer (the browser of BNB Beacon Chain) <https://testnet-explorer.binance.org/> 
-
 - Binance Wallet (Wallet Extension)
 
 ## Steps 
