@@ -1,25 +1,23 @@
 # Issuing a token on BNB Chain tutorial
 
 ## Prerequisites
-**BNB Beacon Chain(BC)**: Beacon Chain is a blockchain developed by Binance and its community that implements a vision of a decentralized exchange (DEX) for digital assets. (DEX on Beacon Chain has been decommissioned on Aug. 2022). At the heart of Beacon Chain is a highly performant matching engine built on distributed consensus that aims to replicate the <1 second trading efficiency of current centralized exchanges. Beacon Chain is not EVM-capable and doesn’t support smart contracts.
+BNB Chain is composed of two blockchains - BNB Beacon Chain (BC) and BNB Smart Chain (BSC). The BNB Beacon Chain is the blockchain component that is responsible for the governance of the BNB Chain and manages staking and voting on the BNB Chain. Whereas, the BNB Smart Chain is the blokchain component that is EVM compatible, consensus layers, and with hubs to multi-chains. BNB Chain, one of the most popular blockchains in the world, dedicates to delivering its core infrastructure necessary for future public adoption, and always remains as a community-first and open-source ecosystem built on a permissionless and decentralized environment.
 
-**BEP2**: a token standard for fungible tokens on BNB Beacon Chain, describes a common set of rules for token management within the Binance Chain ecosystem. It introduces the following details of a token on Beacon Chain:
+**BEP2**: a token standard for fungible tokens on BNB Beacon Chain, describes a common set of rules for token management within the BNB Chain ecosystem. It introduces the following details of a token on Beacon Chain:
 
 - What information makes a token on Beacon Chain
 - What actions can be performed on a token on Beacon Chain
 
 <https://github.com/bnb-chain/BEPs/blob/master/BEP2.md>
 
-**BEP20**: a token standard for fungible tokens on BNB Smart Chain, defines the implementation of APIs for token smart contracts. It is proposed by deriving the ERC20 protocol of Ethereum and provides the basic functionality to transfer tokens, allow tokens to be approved so they can be spent by another on-chain third party, and transfer between Binance Chain and Binance Smart Chain
+**BEP20**: a token standard for fungible tokens on BNB Smart Chain, defines the implementation of APIs for token smart contracts. It is proposed by deriving the ERC20 protocol of Ethereum and provides the basic functionality to transfer tokens, allow tokens to be approved so they can be spent by another on-chain third party, and transfer between BNB Beacon Chain and BNB Smart Chain
 <https://github.com/bnb-chain/BEPs/blob/master/BEP20.md>
 
 ## Tools used in this tutorial
 - Black IDE (To create, compile and interact with Smart Contract)
 - bnbcli (BNB Beacon Chain Command Line Interface) <https://github.com/bnb-chain/node/releases>
 - Bscscan (the browser of BNB Smart Chain) <https://testnet.bscscan.com/> 
-
 - BNB Beacon Chain Explorer (the browser of BNB Beacon Chain) <https://testnet-explorer.binance.org/> 
-
 - Binance Wallet (Wallet Extension)
 
 ## Steps 
@@ -43,33 +41,40 @@ On the other hand, if a token is issued on BSC first and want it to circulate on
 - ***token-name***: it is the long official name, such as "Binance Coin". It is limited to 32 characters.
 - ***symbol***: identifier of the token. The length of symbol should be between 2 and 8. 
 - ***total-supply***: an int64 boosted by **1e8** for decimal part. The max total supply is 90 billion.
-- **from**: the sender address of the transaction and it will become the owner of the token, all created tokens will be in this account.
+- ***from*** the sender address of the transaction and it will become the owner of the token, all created tokens will be in this account.
 - ***chain-id***: “Binance-Chain-Tigris” for Beacon Chain Mainnet, “Binance-Chain-Ganges” for Beacon Chain Testnet
 - ***node***: RPC endpoint of testnet
 - ***mintable***: that means whether this token can be minted in the future. To set the tokes to be mintable, you need to add --mintable, otherwise, just omit this field to set this token to be non-mintable.
-4. Check transaction in BNB Beacon Chain Explorer <https://testnet-explorer.binance.org/tx/F823D2E2F672366BD749DA93BCF67F3FBE3D04CFA000F4F5EFCA28DD84CA6675>. Fee on testnet is fixed at 10 BNB. Record the Asset name BCC-F82
+4. Check transaction in BNB Beacon Chain Explorer <https://testnet-explorer.binance.org/tx/1345A0F7BE000A5CC1C529A07F94F3C42046C89BE6D00776F9164713469D3F8B>. Fee on both mainnet and testnet is fixed at 10 BNB. Record the Asset name BCC-134
 5. Soon we will see this token appear under BC address in Binance Wallet 
 ### Issue token BCC on BNB Smart Chain
 1. In Black IDE, connect with your Metamask and choose network to BNB Chain Testnet.
-2. Create a project and choose ERC20 template
+2. Create a project called "BCCToken" and choose Coin template
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.001.png)
+![](images/create_project.png)
 
-2. Open ERC20.sol under contracts folder and change the contract name to "BNBChainClubToken".
+3. Prepare the Smart Contract code. Here we will use the BEP20 token template:
+https://docs.bnbchain.org/assets/files/BEP20Token-90279eb8ba08bbc0df679f37d7886d68.template
+4. Copy template code into Coin.sol, and rename contract BEP20Token to BNBChainClubToken. Modify the below parameters in constructor()
+***_name***: official name
+***_symbol***: The symbol of the BEP20 token must be exactly identical to the prefix of the BEP2 token(case sensitive).
+***_decimals***: by default should be 18
+***_totalSupply***: Put the same supply as Beacon Chain
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.002.png)
+![](images/contract_rename.png)
 
-3. Check Solidity Compiler version at bottom right corner, make sure it is 0.8.0, which is the same as pragma version in the code.
+5. Change Solidity Compiler version to 0.5.16 as our code template is using this version
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.004.png)
+6. Click Build and Deploy, when deploy choose BNBChainClubToken.json (This is the ABI file of the smart contract).
 
-4. Click Build and Deploy, when deploy choose BNBChainClubToken.json (This is the ABI file of the smart contract), give name as "BNB Chain Club Token", symbol as "BCC" and totalSupply as 21000000000000000000000000.
-6. Check transaction in Bscscan. No extra fee, just a normal gas fee. Record the address of the token contract.
-7. We could add this token contract address to Binance wallet under BSC address.
+![](images/deploy_contract.png)
+
+8. Check transaction in Bscscan. https://testnet.bscscan.com/tx/0x994b0af5e8557ea4f55c8490ddfd7699449652fd3d32627987e8f6dc68010f84 No extra fee, just a normal gas fee. Record the address of the token contract.
+9. We could add this token contract address to Binance wallet under BSC address.
 ### Bind token BCC on BNB Beacon Chain & BNB Smart Chain
 1. Send bind transaction from Beacon Chain side
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli bridge bind --symbol BCC-XXX --amount 0 --expire-time 1666219723 --contract-address 0x92b16A95fBc248d933F87dF89fC6Bcd18C45BcE3 --contract-decimals 18 --from isaackey --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80`
+&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli bridge bind --symbol BCC-134 --amount 0 --expire-time 1666219723 --contract-address 0xc9919d28bed6ce897dea7edf1a8f05e843750adc --contract-decimals 18 --from isaackey --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80`
 
 - ***symbol***: full identifier of the token we get from above
 - ***amount***: the amount to be locked on **BNB Beacon Chain**. Here we want all BCC token stay on BC first, hence we lock 0 here.
@@ -81,42 +86,40 @@ Crosschain Bind Fee on testnet is fixed 0.1 BNB
 ### Approve Bind Request on BNB Smart Chain
 1. In Black IDE, click on Contract and input our token contract address, it will show available functions to interact with the contract. We choose approve() to grant transfer permission to the system build-in contract TokenManager 0x0000000000000000000000000000000000001008
 
-spender is TokenManger. 
+- ***spender***: TokenManger contract. 
+- ***amount***: 21000000000000000000000000 which is all of the circulation (1e18) on **BNB Smart Chain**
 
-amount is 21000000000000000000000000 which is all of the circulation (1e18) on **BNB Smart Chain**
+<https://testnet.bscscan.com/tx/0xf43d27c9b1c3426953a2501dc38c8e01ff9bfbb5e703d4174cc6edc237142188> 
 
-<https://testnet.bscscan.com/tx/0x4c9ca7804c151e9fc4b4bda68dabf60b4fb6bd63123172c1017f33b3da9520c3> 
-
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.005.png)
+![](images/approve.png)
 
 2. Input 0x0000000000000000000000000000000000001008 in Black IDE, you will see below because it doesn’t have ABI file. Get ABI file of TokenManager from here: <https://github.com/bnb-chain/bsc-genesis-contract/blob/master/abi/tokenmanager.abi> Add it to ABI Storage
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.006.png)
+![](images/tokenmanger_missing_abi.png)
 
 3. After ABI is imported, choose approveBind(), we will let TokenManager complete the binding by transferring our specified amount to pegged account TokenHub.
 
 BNB to Send is the fee charged by cross-chain service. TokenManager will call TokenHub, then TokenHub initiates a cross-chain transaction to BC to complete the binding. So there will be a cross-chain transaction and incur a fee. Normally it should be 0.01 BNB.
 
-contractAddr is our token contract address
+- ***contractAddr***: Our token contract address
+- ***cbep2Symbol***: The full token name on Beacon Chain
 
-bep2Symbol is the full token name on Beacon Chain
-
-These transactions will only have a normal gas fee. 
-
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.007.png)
+![](images/approve_bind.png)
 
 4. Confirm the bind result by
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli token info --symbol BCC-XXX --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80`
+&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli token info --symbol BCC-134 --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80`
 
 You should see "contract\_address" and "contract\_decimals" returned in result.
+
+![](images/bind_result.png)
 
 5. Check the balance of BCC under BSC address in Binance wallet, it should become 0
 6. The whole bind has finished. The total cost is ~10.2 BNB. We set total circulation to 21,000,000 BCC on two chains. Now all BCC are on BC, and the amount on BSC has been locked into TokenHub. We could do a cross-chain transfer from BC to BSC now.
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.008.png)
+![](images/crosschain_transfer.png)
 
 
 In the above steps, it's worth noting that there is no token name/symbol limitation. You could name it any as you wish. This means there could be several BNB/BUSD/USDT/CAKE .etc tokens on the chain but only one will be the token we want to interact with. Always be careful when dealing with token addresses. Usually, CoinMarketCap will list the official addresses of a token on different chains.
 
-![](Aspose.Words.09de80c8-76c4-47d4-8af2-a96c3ba1e6a4.009.png)
+![](images/cmc.png)
