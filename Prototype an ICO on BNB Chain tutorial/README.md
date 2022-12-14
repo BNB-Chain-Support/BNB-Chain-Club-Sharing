@@ -14,7 +14,9 @@ Start-ups generally have limited access to capital, and the financing options th
 
 **Part 2**: Learn the fundamental concepts of solidity programming by writing and testing the given set of solidity codes.
 
-**Part 3**: Build an application in Solidity to facilitate an ICO service.
+**Part 3**: Introduction to OpenZeppelin Contracts
+
+**Part 4**: Build an application in Solidity to facilitate an ICO service.
 
 ## Tools/References used in this Series
 
