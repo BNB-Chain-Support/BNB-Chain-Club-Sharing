@@ -1,4 +1,4 @@
-# Tutorial Series: Build a simple ICO smart contract on Binance Smart Chain(BSC)
+# Tutorial Series: Build a simple ICO smart contract on BNB Smart Chain
 
 ## Introduction
 
