@@ -11,7 +11,9 @@ Start-ups generally have limited access to capital, and the financing options th
 ## Series
 
 **Part 1**: Intro to Remix Environment with BSC, compiling a simple Solidity Script and learning about the Remix Development environment.
+
 **Part 2**: Learn the fundamental concepts of solidity programming by writing and testing the given set of solidity codes.
+
 **Part 3**: Build an application in Solidity to facilitate an ICO service.
 
 ## Tools/References used in this Series
