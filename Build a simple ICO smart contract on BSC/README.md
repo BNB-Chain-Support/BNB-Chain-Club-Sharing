@@ -11,7 +11,7 @@ Start-ups generally have limited access to capital, and the financing options th
 ## Series
 
 **Part 1**: Intro to Remix Environment with BSC, compiling a simple Solidity Script and learning about the Remix Development environment.
-<https://remix.ethereum.org/>
+<https://youtu.be/TEn4f3KJnNg>
 
 **Part 2**: Learn the fundamental concepts of solidity programming by writing and testing the given set of solidity codes.
 
