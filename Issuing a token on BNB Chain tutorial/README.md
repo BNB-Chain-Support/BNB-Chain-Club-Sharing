@@ -29,14 +29,18 @@ On the other hand, if a token is issued on BSC first and want it to circulate on
 ### Issue token BCC on BNB Beacon Chain
 1. Import your account mnemonic into tbnbcli and set a passphrase
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli keys add isaackey --recover`
+```
+$ tbnbcli keys add isaackey --recover
+```
 
 &nbsp;&nbsp;&nbsp;&nbsp;(The key name after add is customized, here just use isaackey for an example.)
 
 2. Import your account mnemonic into tbnbcli and set a passphrase
 3. Issue BCC on BC by
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli token issue --token-name "BNB Chain Club token" --symbol BCC --total-supply 2100000000000000 --from isaackey  --chain-id Binance-Chain-Ganges   --node=data-seed-pre-2-s1.binance.org:80`
+```
+$ tbnbcli token issue --token-name "BNB Chain Club token" --symbol BCC --total-supply 2100000000000000 --from isaackey  --chain-id Binance-Chain-Ganges   --node=data-seed-pre-2-s1.binance.org:80
+```
 
 - ***token-name***: it is the long official name, such as "Binance Coin". It is limited to 32 characters.
 - ***symbol***: identifier of the token. The length of symbol should be between 2 and 8. 
@@ -74,7 +78,9 @@ https://docs.bnbchain.org/assets/files/BEP20Token-90279eb8ba08bbc0df679f37d7886d
 ### Bind token BCC on BNB Beacon Chain & BNB Smart Chain
 1. Send bind transaction from Beacon Chain side
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli bridge bind --symbol BCC-134 --amount 0 --expire-time 1666219723 --contract-address 0xc9919d28bed6ce897dea7edf1a8f05e843750adc --contract-decimals 18 --from isaackey --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80`
+```
+$ tbnbcli bridge bind --symbol BCC-134 --amount 0 --expire-time 1666219723 --contract-address 0xc9919d28bed6ce897dea7edf1a8f05e843750adc --contract-decimals 18 --from isaackey --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80
+```
 
 - ***symbol***: full identifier of the token we get from above
 - ***amount***: the amount to be locked on **BNB Beacon Chain**. Here we want all BCC token stay on BC first, hence we lock 0 here.
@@ -108,7 +114,9 @@ BNB to Send is the fee charged by cross-chain service. TokenManager will call To
 
 4. Confirm the bind result by
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli token info --symbol BCC-134 --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80`
+```
+$ tbnbcli token info --symbol BCC-134 --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80
+```
 
 You should see "contract\_address" and "contract\_decimals" returned in result.
 
