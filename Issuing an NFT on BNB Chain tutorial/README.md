@@ -149,7 +149,7 @@ Above are all configurable.
 
 8. Choose safeMint method, input mint fee 0.0005BNB and address, then execute
 
-<img src="images/step8.jpeg" width=75% height=75%>
+<img src="images/step8.png" width=75% height=75%>
 
 9. Verify ownership by using ownerOf method and type tokenId which is 1 we just minted.
 
@@ -159,7 +159,7 @@ Above are all configurable.
 
 Open MetaMask app and choose NFTs table, then Import NFTs
 
-<img src="images/step10.jpeg" width=40% height=40%>
+<img src="images/step10.png" width=40% height=40%>
 
 11. Input the NFT contract address we just created and token ID 1
 
@@ -177,4 +177,4 @@ Question: Why it is showing BABT and description as “Binance Account Bound Tok
 
 Answer: MetaMask here reads metadata info from TokenURI <https://www.binance.info/bapi/asset/v1/public/wallet-direct/babt/metadata/1> 
 
-<img src="images/qa.jpeg" width=75% height=75%>
+<img src="images/qa.png" width=75% height=75%>
