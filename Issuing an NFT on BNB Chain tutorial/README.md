@@ -163,11 +163,11 @@ Open MetaMask app and choose NFTs table, then Import NFTs
 
 11. Input the NFT contract address we just created and token ID 1
 
-<img src="images/step11.png" width=40% height=40%>
+<img src="images/step11.jpeg" width=40% height=40%>
 
 12. Here we go, we could see the NFT in MetaMask now.
 
-<img src="images/step12.png" width=40% height=40%>
+<img src="images/step12.jpeg" width=40% height=40%>
 
 13. Click on the NFT and you will see detail information
 
