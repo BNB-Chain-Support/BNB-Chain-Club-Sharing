@@ -149,7 +149,7 @@ Above are all configurable.
 
 8. Choose safeMint method, input mint fee 0.0005BNB and address, then execute
 
-<img src="images/step8.png" width=75% height=75%>
+<img src="images/step8.png" width=50% height=50%>
 
 9. Verify ownership by using ownerOf method and type tokenId which is 1 we just minted.
 
@@ -177,4 +177,4 @@ Question: Why it is showing BABT and description as “Binance Account Bound Tok
 
 Answer: MetaMask here reads metadata info from TokenURI <https://www.binance.info/bapi/asset/v1/public/wallet-direct/babt/metadata/1> 
 
-<img src="images/qa.png" width=75% height=75%>
+<img src="images/qa.png" width=40% height=40%>
