@@ -97,7 +97,7 @@ Crosschain Bind Fee on testnet is fixed 0.1 BNB
 
 <https://testnet.bscscan.com/tx/0xf43d27c9b1c3426953a2501dc38c8e01ff9bfbb5e703d4174cc6edc237142188> 
 
-![](images/approve.png)
+<img src="images/approve.png" width=75% height=75%>
 
 2. Input 0x0000000000000000000000000000000000001008 in Black IDE, you will see below because it doesn’t have ABI file. Get ABI file of TokenManager from here: <https://github.com/bnb-chain/bsc-genesis-contract/blob/master/abi/tokenmanager.abi> Add it to ABI Storage
 
@@ -110,7 +110,7 @@ BNB to Send is the fee charged by cross-chain service. TokenManager will call To
 - ***contractAddr***: Our token contract address
 - ***cbep2Symbol***: The full token name on Beacon Chain
 
-![](images/approve_bind.png)
+<img src="images/approve_bind.png" width=75% height=75%>
 
 4. Confirm the bind result by
 
@@ -125,9 +125,8 @@ You should see "contract\_address" and "contract\_decimals" returned in result.
 5. Check the balance of BCC under BSC address in Binance wallet, it should become 0
 6. The whole bind has finished. The total cost is ~10.2 BNB. We set total circulation to 21,000,000 BCC on two chains. Now all BCC are on BC, and the amount on BSC has been locked into TokenHub. We could do a cross-chain transfer from BC to BSC now.
 
-![](images/crosschain_transfer.png)
-
+<img src="images/crosschain_transfer.png" width=40% height=40%>
 
 In the above steps, it's worth noting that there is no token name/symbol limitation. You could name it any as you wish. This means there could be several BNB/BUSD/USDT/CAKE .etc tokens on the chain but only one will be the token we want to interact with. Always be careful when dealing with token addresses. Usually, CoinMarketCap will list the official addresses of a token on different chains.
 
-![](images/cmc.png)
+<img src="images/cmc.png" width=50% height=50%>
