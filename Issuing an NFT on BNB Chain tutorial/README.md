@@ -171,7 +171,7 @@ Open MetaMask app and choose NFTs table, then Import NFTs
 
 13. Click on the NFT and you will see detail information
 
-![](images/step13.png)
+<img src="images/step13.jpeg" width=40% height=40%>
 
 Question: Why it is showing BABT and description as “Binance Account Bound Token”?
 
