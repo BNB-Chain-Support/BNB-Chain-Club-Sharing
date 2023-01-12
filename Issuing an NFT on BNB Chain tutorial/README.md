@@ -68,7 +68,7 @@ NFT metadata: <https://service-avatar.dodoex.io/api/v1/avatars/metadata/bsc/2728
 
 E.g. CryptoPunks. Obsolete solution. 
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.001.png)
+![](images/cryptopunks.png)
 
 <https://www.larvalabs.com/cryptopunks> 
 
@@ -76,9 +76,9 @@ E.g. CryptoPunks. Obsolete solution.
 
 Stored on chain forever with text that could generate images. This is expensive (on chain storage cost) and monotonous.
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.002.png)
+![](images/autoglyphs1.png)
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.003.png)
+![](images/autoglyphs2.png)
 
 3. Centralized storage
 
@@ -90,7 +90,7 @@ Need to maintain the web servers and owner of the web server could change metada
 
 <https://www.binance.info/bapi/asset/v1/public/wallet-direct/babt/metadata/6484>
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.004.png)
+![](images/babt_meta.png)
 
 4. Decentralized storage
 
@@ -100,9 +100,9 @@ Used decentralized storages like IPFS. E.g. Bored Ape Yacht Club
 
 ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1 (Use Brave to view it)
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.005.png)
+![](images/bayc.png)
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.006.png)
+![](images/bayc_meta.png)
 ## Tools used in this tutorial
 - Black IDE online version (To create, compile and interact with Smart Contract)
 - OpenZeppelin ERC721 smart contract 
@@ -112,64 +112,69 @@ ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1 (Use Brave to view it)
 ## Steps 
 In below steps, we will issue a very simple NFT called TechOps Bound Token (TOBT) on BNB Smart Chain Testnet with 0.0005 BNB mint fee and borrow BABT image just for illustration. Source code just implemented several necessary methods. In general contract code from other projects will contain more methods.
 
-1. Login into Black IDE, choose BNB chain Testnet and connect to your MetaMask![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.007.png)
-2. Create a project called “TOBT” and choose ERC721 as Template 
+1. Login into Black IDE, choose BNB chain Testnet and connect to your MetaMask
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.008.png)
+![](images/step1.png)
 
-3. Create a new .sol file called TOBT, remove the existing GameItem.sol.
+2. Create a project called “BCCBT” and choose ERC721 as Template 
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.009.png)
+![](images/step2.png)
 
-4. Copy source code from <https://github.com/BNB-Chain-Support/BNB-Chain-Club-Sharing/blob/main/Issuing%20an%20NFT%20on%20BNB%20Chain%20tutorial/TOBT.sol> and choose Solc version to 0.8.4
+3. Create a new .sol file called BCCBT, remove the existing GameItem.sol.
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.010.png)
+![](images/step3.png)
+
+4. Copy source code from <https://github.com/BNB-Chain-Support/BNB-Chain-Club-Sharing/blob/main/Issuing%20an%20NFT%20on%20BNB%20Chain%20tutorial/BCCBT.sol> and choose Solc version to 0.8.4
+
+![](images/step4.png)
 
 - Here we use BABT image address as \_baseTokenURI
 - Set mint fee as 0.0005
-- Create the contract with name “TechOps Bound Token” and symbol “TOBT”
+- Create the contract with name “BNB Chain Club Token” and symbol “BCCBT”
 Above are all configurable.
 
-5. Edit default project settings, change main file to TOBT.sol and Smart contract to deploy to TOBT.json.
+5. Edit default project settings, change main file to BCCBT.sol and Smart contract to deploy to BCCBT.json.
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.011.png)
+![](images/step5.png)
 
 6. Build and Deploy the smart contract
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.012.png)
+![](images/step6_1.png)
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.013.png)
+![](images/step6_2.png)
 
 7. Click on the contract address and now we will mint the 1st NFT of our contract.
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.014.png)
+![](images/step7.png)
 
 8. Choose safeMint method, input mint fee 0.0005BNB and address, then execute
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.015.png)
+![](images/step8.png)
 
 9. Verify ownership by using ownerOf method and type tokenId which is 1 we just minted.
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.016.png)
+![](images/step9.png)
 
 10. Now we will check this NFT in our wallet. Since MetaMask Browser Extension doesn’t support view NFT. We will use MetaMask mobile app version to check it.
 
 Open MetaMask app and choose NFTs table, then Import NFTs
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.017.png)
+![](images/step10.png)
 
 11. Input the NFT contract address we just created and token ID 1
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.018.png)
+![](images/step11.jpeg)
 
 12. Here we go, we could see the NFT in MetaMask now.
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.019.png)
+![](images/step12.jpeg)
 
 13. Click on the NFT and you will see detail information
 
-![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.020.png)
+![](images/step13.png)
 
 Question: Why it is showing BABT and description as “Binance Account Bound Token”?
 
-Answer: MetaMask here reads metadata info from TokenURI <https://www.binance.info/bapi/asset/v1/public/wallet-direct/babt/metadata/1> ![](Aspose.Words.0c0b20b0-8ff6-44f5-a3ea-8fe224c81124.021.png) 
+Answer: MetaMask here reads metadata info from TokenURI <https://www.binance.info/bapi/asset/v1/public/wallet-direct/babt/metadata/1> 
+
+![](images/qa.png)
