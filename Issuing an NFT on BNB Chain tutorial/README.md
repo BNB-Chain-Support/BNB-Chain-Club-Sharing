@@ -110,7 +110,7 @@ ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1 (Use Brave to view it)
 - Bscscan (the browser of BNB Smart Chain) <https://testnet.bscscan.com/> 
 - MetaMask Wallet (Browser Extension & Mobile)
 ## Steps 
-In below steps, we will issue a very simple NFT called TechOps Bound Token (TOBT) on BNB Smart Chain Testnet with 0.0005 BNB mint fee and borrow BABT image just for illustration. Source code just implemented several necessary methods. In general contract code from other projects will contain more methods.
+In below steps, we will issue a very simple NFT called BNB Chain Club Bound Token (BCCBT) on BNB Smart Chain Testnet with 0.0005 BNB mint fee and borrow BABT image just for illustration. Source code just implemented several necessary methods. In general contract code from other projects will contain more methods.
 
 1. Login into Black IDE, choose BNB chain Testnet and connect to your MetaMask
 
@@ -149,7 +149,7 @@ Above are all configurable.
 
 8. Choose safeMint method, input mint fee 0.0005BNB and address, then execute
 
-![](images/step8.png)
+<img src="images/step8.jpeg" width=75% height=75%>
 
 9. Verify ownership by using ownerOf method and type tokenId which is 1 we just minted.
 
@@ -159,7 +159,7 @@ Above are all configurable.
 
 Open MetaMask app and choose NFTs table, then Import NFTs
 
-![](images/step10.png)
+<img src="images/step10.jpeg" width=40% height=40%>
 
 11. Input the NFT contract address we just created and token ID 1
 
@@ -177,4 +177,4 @@ Question: Why it is showing BABT and description as “Binance Account Bound Tok
 
 Answer: MetaMask here reads metadata info from TokenURI <https://www.binance.info/bapi/asset/v1/public/wallet-direct/babt/metadata/1> 
 
-![](images/qa.png)
+<img src="images/qa.jpeg" width=75% height=75%>
