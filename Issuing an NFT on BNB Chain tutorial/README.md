@@ -57,11 +57,11 @@ interface IERC721Metadata is IERC721 {
 
 <https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol> 
 
-<https://www.binance.com/en/nft/collection/dodo-minions-538734608664449025?isBack=1>
+<https://www.binance.com/en/nft/collection/the-cr7-nft-collection-645520095796019200>
 
-<https://www.binance.com/en/nft/item/23084414> Token ID 16204
+<https://www.binance.com/en/nft/item/51284222> Token ID 1019300803624
 
-NFT metadata: <https://service-avatar.dodoex.io/api/v1/avatars/metadata/bsc/27285411598> 
+NFT metadata: <https://public.nftstatic.com/static/nft/res/a2258dd001f041198531ef5b51728d38.mp4> 
 ### NFT Meta Data and Media Storage Types
 
 1. No storage of media on chain. 
