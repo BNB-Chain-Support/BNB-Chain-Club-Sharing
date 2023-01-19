@@ -14,6 +14,7 @@ Start-ups generally have limited access to capital, and the financing options th
 <https://youtu.be/TEn4f3KJnNg>
 
 **Part 2**: Learn the fundamental concepts of solidity programming by writing and testing the given set of solidity codes.
+<https://youtu.be/E7P4yQQ2jTU>
 
 **Part 3**: Introduction to OpenZeppelin Contracts.
 
