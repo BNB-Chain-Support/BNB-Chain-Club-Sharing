@@ -29,14 +29,18 @@ On the other hand, if a token is issued on BSC first and want it to circulate on
 ### Issue token BCC on BNB Beacon Chain
 1. Import your account mnemonic into tbnbcli and set a passphrase
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli keys add isaackey --recover`
+```
+$ tbnbcli keys add isaackey --recover
+```
 
 &nbsp;&nbsp;&nbsp;&nbsp;(The key name after add is customized, here just use isaackey for an example.)
 
 2. Import your account mnemonic into tbnbcli and set a passphrase
 3. Issue BCC on BC by
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli token issue --token-name "BNB Chain Club token" --symbol BCC --total-supply 2100000000000000 --from isaackey  --chain-id Binance-Chain-Ganges   --node=data-seed-pre-2-s1.binance.org:80`
+```
+$ tbnbcli token issue --token-name "BNB Chain Club token" --symbol BCC --total-supply 2100000000000000 --from isaackey  --chain-id Binance-Chain-Ganges   --node=data-seed-pre-2-s1.binance.org:80
+```
 
 - ***token-name***: it is the long official name, such as "Binance Coin". It is limited to 32 characters.
 - ***symbol***: identifier of the token. The length of symbol should be between 2 and 8. 
@@ -74,7 +78,9 @@ https://docs.bnbchain.org/assets/files/BEP20Token-90279eb8ba08bbc0df679f37d7886d
 ### Bind token BCC on BNB Beacon Chain & BNB Smart Chain
 1. Send bind transaction from Beacon Chain side
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli bridge bind --symbol BCC-134 --amount 0 --expire-time 1666219723 --contract-address 0xc9919d28bed6ce897dea7edf1a8f05e843750adc --contract-decimals 18 --from isaackey --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80`
+```
+$ tbnbcli bridge bind --symbol BCC-134 --amount 0 --expire-time 1666219723 --contract-address 0xc9919d28bed6ce897dea7edf1a8f05e843750adc --contract-decimals 18 --from isaackey --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80
+```
 
 - ***symbol***: full identifier of the token we get from above
 - ***amount***: the amount to be locked on **BNB Beacon Chain**. Here we want all BCC token stay on BC first, hence we lock 0 here.
@@ -91,7 +97,7 @@ Crosschain Bind Fee on testnet is fixed 0.1 BNB
 
 <https://testnet.bscscan.com/tx/0xf43d27c9b1c3426953a2501dc38c8e01ff9bfbb5e703d4174cc6edc237142188> 
 
-![](images/approve.png)
+<img src="images/approve.png" width=75% height=75%>
 
 2. Input 0x0000000000000000000000000000000000001008 in Black IDE, you will see below because it doesn’t have ABI file. Get ABI file of TokenManager from here: <https://github.com/bnb-chain/bsc-genesis-contract/blob/master/abi/tokenmanager.abi> Add it to ABI Storage
 
@@ -104,11 +110,13 @@ BNB to Send is the fee charged by cross-chain service. TokenManager will call To
 - ***contractAddr***: Our token contract address
 - ***cbep2Symbol***: The full token name on Beacon Chain
 
-![](images/approve_bind.png)
+<img src="images/approve_bind.png" width=75% height=75%>
 
 4. Confirm the bind result by
 
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli token info --symbol BCC-134 --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80`
+```
+$ tbnbcli token info --symbol BCC-134 --chain-id Binance-Chain-Ganges --node=data-seed-pre-2-s1.binance.org:80
+```
 
 You should see "contract\_address" and "contract\_decimals" returned in result.
 
@@ -117,9 +125,8 @@ You should see "contract\_address" and "contract\_decimals" returned in result.
 5. Check the balance of BCC under BSC address in Binance wallet, it should become 0
 6. The whole bind has finished. The total cost is ~10.2 BNB. We set total circulation to 21,000,000 BCC on two chains. Now all BCC are on BC, and the amount on BSC has been locked into TokenHub. We could do a cross-chain transfer from BC to BSC now.
 
-![](images/crosschain_transfer.png)
-
+<img src="images/crosschain_transfer.png" width=40% height=40%>
 
 In the above steps, it's worth noting that there is no token name/symbol limitation. You could name it any as you wish. This means there could be several BNB/BUSD/USDT/CAKE .etc tokens on the chain but only one will be the token we want to interact with. Always be careful when dealing with token addresses. Usually, CoinMarketCap will list the official addresses of a token on different chains.
 
-![](images/cmc.png)
+<img src="images/cmc.png" width=50% height=50%>
