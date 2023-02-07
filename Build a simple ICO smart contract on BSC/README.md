@@ -17,6 +17,7 @@ Start-ups generally have limited access to capital, and the financing options th
 <https://youtu.be/E7P4yQQ2jTU>
 
 **Part 3**: Introduction to OpenZeppelin Contracts.
+<https://youtu.be/oBO1c9z0yhc>
 
 **Part 4**: Build an application in Solidity to facilitate an ICO service.
 
@@ -25,13 +26,3 @@ Start-ups generally have limited access to capital, and the financing options th
 - Remix IDE (To create, compile and interact with Smart Contract) <https://remix.ethereum.org/>
 - How to set up and connect Metamask to BSC Testnet <https://medium.com/spartanprotocol/how-to-connect-metamask-to-bsc-testnet-7d89c111ab2>
 - Bscscan (the browser explorer of BNB Smart Chain) <https://testnet.bscscan.com/>
-
-<!-- ## Steps
-Since BSC was created after BC, there are some tokens on BC issued earlier are not existing on BSC yet. In the below steps we will issue a token called BCC (BNB Chain Club token) with a total circulation of 21,000,000 on testnet of BNB Beacon Chain and BNB Smart Chain (BSC).
-
-### Issue token BCC on BNB Beacon Chain
-1. Import your account mnemonic into tbnbcli and set a passphrase
-
-&nbsp;&nbsp;&nbsp;&nbsp;`$ tbnbcli keys add isaackey --recover`
-
-&nbsp;&nbsp;&nbsp;&nbsp;(The key name after add is customized, here just use isaackey for an example.) -->
