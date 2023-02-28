@@ -19,7 +19,7 @@
 	- *touch index.js*
 	- *touch abi.json*
 4. Populate files with neccesarry data
-	- .env : API KEY
+	- .env : API_KEY
 	- abi.json : contract ABI
 5. Ensure the following within the *[index.js](https://github.com/BNB-Chain-Support/BNB-Chain-Club-Sharing/blob/90ec1934e892b5c07aad1cb63ba6f12c9523fad1/Smart%20Contract%20Monitor/index.js)* file are changed/ammended as per your usecase
 	- chain - refers to the network you are connecting to (https://docs.moralis.io/web3-data-api/reference/run-contract-function)
