@@ -2,10 +2,10 @@
 # Smart Contract Monitor
 
 ### Prerequisites
-1. Moralis API key (https://admin.moralis.io/web3apis)
-2. Code editor such as Visual Studio Code (https://code.visualstudio.com/download)
-3. NodeJS (https://nodejs.org/en/download/)
-4. Smart contract with read only functions (https://bscscan.com/contractsVerified)
+1. Moralis API key - (https://admin.moralis.io/web3apis)
+2. Code editor such as Visual Studio Code - (https://code.visualstudio.com/download)
+3. NodeJS - (https://nodejs.org/en/download/)
+4. Smart contract with read only functions - (https://bscscan.com/contractsVerified)
 
 ### Steps
 
