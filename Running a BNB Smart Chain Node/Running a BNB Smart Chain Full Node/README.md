@@ -97,7 +97,7 @@ Check the syncing status. Below command returns false if the block is up to date
 eth.syncing
 ```
 
-### Common Issues you may encounter
+### Common Issues you may encounter when running a node
 
 1. During node start-up, you will see the message "Option nousb is deprecated and USB is deactivated by default. Use --usb to enable"
 
@@ -129,6 +129,7 @@ err="retrieved hash chain is invalid: missing parent"
 err="peer is unknown or unhealthy"
 ```
 
-**What to do:** You can ignore them, these are normal messages that you will get if you are connected to unhealthy peers. Your node will drop them automatically.
+**What to do:** You can ignore them, these are normal messages that you will get if you are connected to unhealthy peers. Your node will drop them automatically. Give your node some time to run and find other node. 
+
 
 
