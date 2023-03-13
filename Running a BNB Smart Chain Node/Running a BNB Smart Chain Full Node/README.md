@@ -129,7 +129,7 @@ err="retrieved hash chain is invalid: missing parent"
 err="peer is unknown or unhealthy"
 ```
 
-**What to do:** You can ignore them, these are normal messages that you will get if you are connected to unhealthy peers. Your node will drop them automatically. Give your node some time to run and find other node. 
+**What to do:** You can ignore them, these are normal messages that you will get if you are connected to unhealthy peers. Your node will drop them automatically. Let your run for some time to connect to healthy nodes. 
 
 
 
