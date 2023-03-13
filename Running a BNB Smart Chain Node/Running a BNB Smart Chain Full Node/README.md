@@ -75,14 +75,14 @@ mv server/data-seed/geth/triecache node/geth/triecache
 nohup ./geth --config ./config.toml --datadir ./node  --cache 8000 --rpc.allow-unprotected-txs --txlookuplimit 0 &
 ```
 
-7. Monitor node syncing status by checking bsc.log entries. 
+8. Monitor node syncing status by checking bsc.log entries. 
 
 ```
 tail -40 node/bsc.log
 ```
 
-8. Let your node run for a few minutes. You should be able to see "Imported new chain segment" logs.
-9. Verifying the node status using the Geth Javascript Console
+9. Let your node run for a few minutes. You should be able to see "Imported new chain segment" logs.
+10. 10. Verifying the node status using the Geth Javascript Console
 
 Run the console.
 
@@ -95,12 +95,4 @@ Check the syncing status. Below command returns false if the block is up to date
 ```
 eth.syncing
 ```
-
-Get your node peer count.
-
-```
-net.peerCount
-```
-
-For more commands, refer to https://geth.ethereum.org/docs/interacting-with-geth/rpc
 
