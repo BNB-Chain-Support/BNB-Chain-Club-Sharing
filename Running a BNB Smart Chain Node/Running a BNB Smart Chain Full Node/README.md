@@ -47,7 +47,7 @@ tail -40 nohup.out
 nohup tar -I lz4 -xvf geth.tar.lz4 &
 ```
 
-Monitor the download status by checking nohup.out from time to time.
+Monitor the uncompress status by checking nohup.out from time to time.
 
 ```
 tail -40 nohup.out
