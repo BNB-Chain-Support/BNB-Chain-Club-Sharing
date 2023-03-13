@@ -4,7 +4,7 @@ We will follow the steps in our documentation website - https://docs.bnbchain.or
 For this tutorial we will use an Amazon Linux 2 server.
 
 
-Steps:
+### Steps
 
 1. Create your node directory. We will name ours bsc_node.
 
@@ -95,4 +95,9 @@ Check the syncing status. Below command returns false if the block is up to date
 ```
 eth.syncing
 ```
+
+### Common Issues
+
+Below are some of the common issues you may encounter while running your node.
+
 
