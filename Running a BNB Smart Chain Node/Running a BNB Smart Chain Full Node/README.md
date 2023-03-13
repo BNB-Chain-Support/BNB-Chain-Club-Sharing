@@ -47,7 +47,7 @@ tail -40 nohup.out
 nohup tar -I lz4 -xvf geth.tar.lz4 &
 ```
 
-Monitor the uncompress status by checking nohup.out from time to time.
+Monitor the uncompress status by checking _nohup.out_ from time to time.
 
 ```
 tail -40 nohup.out
@@ -75,13 +75,14 @@ mv server/data-seed/geth/triecache node/geth/triecache
 nohup ./geth --config ./config.toml --datadir ./node  --cache 8000 --rpc.allow-unprotected-txs --txlookuplimit 0 &
 ```
 
-8. Monitor node syncing status by checking bsc.log entries. 
+8. Monitor node syncing status by checking _bsc.log_ entries. 
 
 ```
 tail -40 node/bsc.log
 ```
 
 9. Let your node run for a few minutes. You should be able to see "Imported new chain segment" logs.
+
 10. Verifying the node status using the Geth Javascript Console
 
 Run the console.
@@ -95,5 +96,39 @@ Check the syncing status. Below command returns false if the block is up to date
 ```
 eth.syncing
 ```
+
+### Common Issues you may encounter
+
+1. During node start-up, you will see the message "Option nousb is deprecated and USB is deactivated by default. Use --usb to enable"
+
+```
+INFO [02-28|01:14:21.630] Starting Geth on Ethereum mainnet... 
+INFO [02-28|01:14:21.633] Maximum peer count                       ETH=30 LES=0 total=30
+INFO [02-28|01:14:21.633] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+WARN [02-28|01:14:21.633] Option nousb is deprecated and USB is deactivated by default. Use --usb to enable
+```
+
+**What to do:** This can be ignored, this will not affect the node.
+
+2. During node start-up, you are not able to find the log entries in the terminal
+
+**What to do:** By default, the logs will be recorded in bsc.log. You will find this file in created in your -datadir folder. 
+
+3. You get the following logs
+
+```
+lvl=warn msg="Synchronisation failed, retrying"
+```
+```
+lvl=warn msg="Synchronisation failed, dropping peer" 
+```
+```
+err="retrieved hash chain is invalid: missing parent"
+```
+```
+err="peer is unknown or unhealthy"
+```
+
+**What to do:** You can ignore them, these are normal messages that you will get if you are connected to unhealthy peers. Your node will drop them automatically.
 
 
