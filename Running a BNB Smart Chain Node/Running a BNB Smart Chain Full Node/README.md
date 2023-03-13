@@ -82,7 +82,7 @@ tail -40 node/bsc.log
 ```
 
 9. Let your node run for a few minutes. You should be able to see "Imported new chain segment" logs.
-10. 10. Verifying the node status using the Geth Javascript Console
+10. Verifying the node status using the Geth Javascript Console
 
 Run the console.
 
