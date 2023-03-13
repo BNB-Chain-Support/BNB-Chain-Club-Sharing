@@ -114,7 +114,7 @@ WARN [02-28|01:14:21.633] Option nousb is deprecated and USB is deactivated by d
 
 **What to do:** By default, the logs will be recorded in bsc.log. You will find this file in created in your -datadir folder. 
 
-3. You get the following logs
+3. You get the following logs or something similar
 
 ```
 lvl=warn msg="Synchronisation failed, retrying"
