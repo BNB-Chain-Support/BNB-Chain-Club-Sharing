@@ -29,7 +29,7 @@ wget   $(curl -s https://api.github.com/repos/bnb-chain/bsc/releases/latest |gre
 unzip mainnet.zip
 ```
 
-4. Download latest chaindata snapshot. 
+4. Download latest chaindata snapshot. Edit the snapshot URL as needed.
 
 ```
 nohup aria2c -o geth.tar.lz4 -s14 -x14 -k100M https://pub-c0627345c16f47ab858c9469133073a8.r2.dev/geth-20230304.tar.lz4 -o geth.tar.lz4 &
