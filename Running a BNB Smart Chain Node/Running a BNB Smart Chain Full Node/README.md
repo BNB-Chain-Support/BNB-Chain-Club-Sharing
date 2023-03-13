@@ -96,8 +96,4 @@ Check the syncing status. Below command returns false if the block is up to date
 eth.syncing
 ```
 
-### Common Issues
-
-Below are some of the common issues you may encounter while running your node.
-
 
