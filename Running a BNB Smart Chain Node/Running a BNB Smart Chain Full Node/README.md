@@ -81,6 +81,26 @@ nohup ./geth --config ./config.toml --datadir ./node  --cache 8000 --rpc.allow-u
 tail -40 node/bsc.log
 ```
 
-8. 
+8. Let your node run for a few minutes. You should be able to see "Imported new chain segment" logs.
+9. Verifying the node status using the Geth Javascript Console
 
+Run the console.
+
+```
+./geth attach ipc:./node/geth.ipc
+```
+
+Check the syncing status. Below command returns false if the block is up to date, else it will continue syncing until it is and it will return the last imported block until syncing is completed.
+
+```
+eth.syncing
+```
+
+Get your node peer count.
+
+```
+net.peerCount
+```
+
+For more commands, refer to https://geth.ethereum.org/docs/interacting-with-geth/rpc
 
